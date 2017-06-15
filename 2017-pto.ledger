@@ -1,0 +1,20 @@
+2017-01-01 Opening Balance
+  PTO:Vacation        0.0 days
+  PTO:PersonalChoice   0.0 days
+  MyCompany
+
+2017-01-01 Accrual
+  PTO:Vacation         1.667 days; [=2017/01/01]
+  PTO:Vacation         1.667 days; [=2017/02/01]
+  PTO:Vacation         1.667 days; [=2017/03/01]
+  PTO:Vacation         1.667 days; [=2017/04/01]
+  PTO:Vacation         1.667 days; [=2017/05/01]
+  PTO:Vacation         1.667 days; [=2017/06/01]
+  PTO:Vacation         1.667 days; [=2017/07/01]
+  PTO:Vacation         1.667 days; [=2017/08/01]
+  PTO:Vacation         1.667 days; [=2017/09/01]
+  PTO:Vacation         1.667 days; [=2017/10/01]
+  PTO:Vacation         1.667 days; [=2017/11/01]
+  PTO:Vacation         1.667 days; [=2017/12/01]
+  PTO:Vacation         -0.004 days; [=2017/12/02] ; fix for rounding error
+  MyCompany

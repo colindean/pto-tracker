@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <!-- http://www.launchd.info/ -->
+  <dict>
+	<key>Label</key>
+	<string>cx.cad.pto</string>
+	<key>Program</key>
+	<!-- customize with the absolute path of your send_pto.sh file -->
+  <string>/Users/colin/Source/Personal/pto-tracker/send_pto.sh</string>
+	<key>WorkingDirectory</key>
+	<!-- not totally necessary, but a good measure in case -->
+  <string>/Users/colin/Source/Personal/pto-tracker</string>
+	<key>StartCalendarInterval</key>
+	<dict>
+		<key>Minute</key>
+		<integer>51</integer><!-- 51 minutes past the hour -->
+		<key>Weekday</key>
+		<integer>2</integer><!-- tuesday -->
+		<key>Hour</key>
+		<integer>15</integer><!-- 3 pm hour -->
+	</dict>
+	<key>RunAtLoad</key>
+  <false/>
+	<!--<key>StandardInPath</key>
+	<string>/tmp/pto.stdin</string>-->
+	<key>StandardOutPath</key>
+	<string>/tmp/pto.stdout</string>
+	<key>StandardErrorPath</key>
+	<string>/tmp/pto.stderr</string>
+</dict>
+</plist>
