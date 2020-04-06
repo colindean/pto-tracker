@@ -5,12 +5,12 @@ OOTB assumptions:
 
 * You are on macOS
 * You are using Homebrew for package management
-* You have already installed dependencies with `brew install ledger aha` or
-  executed [`brew bundle`](https://github.com/Homebrew/homebrew-bundle#install)
+* You have already installed dependencies by running
+  [`brew bundle`](https://github.com/Homebrew/homebrew-bundle#install)
   in this directory.
-* You have `sendmail` correctly configured to use something (probably your 
+* You have [`msmtp`](https://marlam.de/msmtp/) correctly configured to use something (probably your
   company's SMTP relay used for automation) for outbound mail or know enough
-  about `sendmail` to hardcode the script to do so.
+  about `msmtp` to hardcode the script to do so.
 
 Usage
 -----
@@ -25,13 +25,33 @@ Add a new entry when you've used some PTO:
 2017-02-11 My Birthday
   PTO:Vacation      -1 days
   MyCompany
-  
+
 2017-07-05 Long Independence Day Weekend
   PTO:Vacation      -1 days
   PTO:PersonalChoice -2 days
   MyCompany
 ```
 
-Edit `send_pto.sh` and `cx.cad.pto.plist` to customize for your name, email, and path to stuff. 
+Edit `send_pto.sh` and `cx.cad.pto.plist` to customize for your name, email, and path to stuff.
 
 Put `cx.cad.pto.plist` into `$HOME/Library/LaunchAgents` and run `launchctl load cx.cad.pto.plist` to schedule it.
+
+Example `~/.msmtprc`
+--------------------
+
+Provided that your company has a relay that allows traffic to example.com
+without authentication, probably behind a firewall or VPN:
+
+```
+defaults
+
+logfile ~/.msmtp.log
+
+account firstname.lastname@example.com
+host smtp.example.com
+port 25
+protocol smtp
+from firstname.lastname@example.com
+
+account default : firstname.lastname@example.com
+```
