@@ -15,5 +15,5 @@ echo "Subject: ${subject}";
 echo "Content-Type: text/html";
 echo "MIME-Version: 1.0";
 echo "";
-echo "$($SCRIPT_DIR/pto.sh | $AHA)";
+echo "$($SCRIPT_DIR/pto.sh future | $AHA)";
 ) | ${SENDMAIL} -t
